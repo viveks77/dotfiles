@@ -130,6 +130,9 @@
   "eslint.lintTask.enable": true,
   "eslint.enable": true,
   "animations.Scrolling": "None",
-
-  
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-w>": false
+  }
 }
