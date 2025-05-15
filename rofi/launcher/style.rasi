@@ -1,0 +1,146 @@
+/*****----- Configuration -----*****/
+configuration {
+    modi:                       "drun,window";
+    show-icons:                 true;
+    display-drun:               "";
+    display-run:                "";
+    display-filebrowser:        "";
+    display-window:             "";
+	drun-display-format:        "{name}";
+	window-format:              "{w} {c}";
+    fake-transparency: true;
+}
+
+
+/*****----- Global Properties -----*****/
+* {
+    font:                          "SF Pro Display 12";
+    font-weight: 700;
+    background:                    transparent;
+    background-alt:              #313244;
+    foreground:                  #eff1f5;
+    selected:                    #8caaee;
+    active:                      #6E77FF;
+    urgent:                      #8E3596;
+    
+}
+
+/*****----- Main Window -----*****/
+window {
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       700px;
+    height:                      400px;
+    border:                      5px;
+    border-color:rgba(140, 170, 238, 0.2);
+    border-radius:               10px;
+    background-color:            @background;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    padding:                     10px;
+    spacing:                     10px;
+    background-color:            @background;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox" ];
+    height:                      100%;
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     0px;
+    padding:                     2px 5px;
+    background-color:            transparent;
+    border-radius:               8px;
+    text-color:                  @foreground;
+    orientation:                 horizontal;
+    children:                    [ "entry" ];
+}
+entry {
+    enabled:                     true;
+    expand:                      true;
+    width:                       100%;
+    padding:                     8px 5px;
+    border-radius:               8px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      text;
+    placeholder-color:           inherit;
+    placeholder: "Search";
+}
+
+/*****----- Listbox & Listview -----*****/
+listbox {
+    spacing:                     0px;
+    padding:                     0px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "listview" ];
+}
+listview {
+    enabled: true;
+    columns: 1;
+    lines: 6;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+
+    spacing: 4px;
+    padding: 4px;
+    background-color: @background;
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled: true;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    text-color: #cdd6f4;
+    cursor: pointer;
+}
+element selected.normal {
+    background-color: @selected;
+    text-color: #FDFBEE;
+}
+element-icon {
+    background-color:            transparent;
+    size:                        24px;
+}
+element-text {
+    padding:                     0px 10px;
+    background-color:            transparent;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0;
+}
+
+/*****----- Mode Switcher (Disabled) -----*****/
+mode-switcher {
+    enabled:                     false;
+}
+
+/*****----- Message & Error -----*****/
+message {
+    background-color:            transparent;
+}
+textbox {
+    padding:                     4px;
+    border-radius:               8px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+error-message {
+    padding:                     4px;
+    border-radius:               8px;
+    background-color:            rgba(255, 0, 0, 0.2);
+    text-color:                  #ff5555;
+}
