@@ -15,6 +15,7 @@
         "temperature",
         "memory",
         "pulseaudio",
+        "backlight",
         "network"
     ],
     "hyprland/window": {
@@ -90,6 +91,12 @@
         "icon-size": 20,
         "tooltip": true,
         "tooltip-format": "Games running: {count}"
+    },
+    "backlight": {
+        "device": "intel_backlight", // or the correct one from `brightnessctl --list`
+        "format": "☀   {percent}%",
+        "format_alt": "Brightness: {percent}%",
+        "interval": 1,
     },
     "privacy": {
         "icon-spacing": 4,
