@@ -34,7 +34,7 @@ window {
     height:                      400px;
     border:                      5px;
     border-color:rgba(140, 170, 238, 0.2);
-    border-radius:               10px;
+    border-radius:               5px;
     background-color:            @background;
 }
 
@@ -55,7 +55,7 @@ inputbar {
     spacing:                     0px;
     padding:                     2px 5px;
     background-color:            transparent;
-    border-radius:               8px;
+    border-radius:               5px;
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "entry" ];
@@ -65,7 +65,7 @@ entry {
     expand:                      true;
     width:                       100%;
     padding:                     8px 5px;
-    border-radius:               8px;
+    border-radius:               5px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      text;
@@ -102,7 +102,7 @@ listview {
 element {
     enabled: true;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: transparent;
     text-color: #cdd6f4;
     cursor: pointer;

@@ -12,9 +12,10 @@
     "modules-right": [
         "tray",
         "cpu",
+        "temperature",
         "memory",
         "pulseaudio",
-        "power-profiles-daemon"
+        "network"
     ],
     "hyprland/window": {
     "format": "{initialClass}",
@@ -27,11 +28,13 @@
         "(.*) Thunar": "Thunar",
         "(.*)obs(.*)": "OBS",
         "Spotify (.*)": "Spotify",
-        "discord(.*)": " Discord",
+        "discord(.*)": "Discord",
         "Code": "VS Code",
-        "Docker Desktop": " Docker",
+        "Docker Desktop": "Docker",
         "kitty": "Kitty",
-        "zen-alpha": "Zen"
+        "zen-alpha": "Zen",
+        "org.gnome.Nautilus": "Files",
+        "Brave-Browser": "Brave"
       },
       "on-click-middle": "pkill waybar && hyprctl dispatch exec waybar"
     },
@@ -107,7 +110,7 @@
     },
     "clock": {
         "interval": 1,
-        "format": "{:%d.%m.%Y | %H:%M}",
+        "format": "{:%I:%M %p | %a %d.%m}",
         "tooltip": false,
         "tooltip-format": "<tt><small>{calendar}</small></tt>"
     },
@@ -158,5 +161,23 @@
         ],
         "format-source": " {volume}%",
         "format-source-muted": " {volume}%"
-    }
+    },
+    "network": {
+        "format-wifi": " {icon}",
+        "format-ethernet": "󰈀",
+        "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤢 ", "󰤨 "],
+        "format-disconnected": "󰪎",
+        "interval": 5,
+        "tooltip-format-wifi": " {bandwidthDownBytes} |  {bandwidthUpBytes} | {essid}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "exec ~/.config/rofi/wifi/wifi.sh",
+        "on-click-right": "kitty -e nmtui"
+    },
+    "temperature": {
+        "thermal-zone": 2,
+        "critical-threshold": 80,
+        "format-critical": "  {temperatureC}°C",
+        "format": "  {temperatureC}°C",
+        "tooltip": false
+    },
 }

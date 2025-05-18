@@ -23,11 +23,10 @@ window {
     x-offset: 0px;
     y-offset: 0px;
     padding: 4px;
-    border-radius: 4px;
     background-color: @background;
-     border:                      5px;
+    border:                      5px;
     border-color:                rgba(140, 170, 238, 0.2);
-    border-radius:               16px;
+    border-radius:               5px;
 }
 
 /*****----- Main Box -----*****/
@@ -37,9 +36,7 @@ mainbox {
     margin: 4px;
     padding: 2px;
     children: [ "listview" ];
-    background-color: transparent;
-   
-    
+    background-color: transparent; 
 }
 
 
@@ -72,7 +69,6 @@ listview {
     reverse: false;
     fixed-height: true;
     fixed-columns: true;
-
     spacing: 4px;
     padding: 4px;
     background-color: @background;
@@ -82,7 +78,7 @@ listview {
 element {
     enabled: true;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: transparent;
     text-color: #cdd6f4;
     cursor: pointer;

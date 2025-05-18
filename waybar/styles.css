@@ -31,7 +31,9 @@ tooltip {
 #power-profiles-daemon,
 #memory,
 #pulseaudio,
+#temperature,
 #gamemode,
+#network,
 #custom-updates {
   /*text-shadow: 1px 1px 2px rgb(0, 0, 0);*/
   /* text shadow, offset-x | offset-y | blur-radius | color */
@@ -45,7 +47,7 @@ tooltip {
   /* pill background shadows */
   border-radius: 8px; /*Default 5*/
   /* rounded corners */
-  color: #77b5a6;
+  color: white;
 }
 
 /* extend empty space on both side of the bar,
