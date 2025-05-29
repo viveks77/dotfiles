@@ -12,9 +12,9 @@ window#waybar {
 
 tooltip {
   font-family: inherit;
-  background: #15161e;
+  background: black;
   /* tooltip background */
-  border: 2px solid #c0caf5;
+  border: 2px solid black;
   /* tooltip border size and color */
   border-radius: 5px;
   /* tooltip rounded corners */
@@ -38,7 +38,7 @@ tooltip {
 #custom-updates {
   /*text-shadow: 1px 1px 2px rgb(0, 0, 0);*/
   /* text shadow, offset-x | offset-y | blur-radius | color */
-  background: #292c3c; /*#15161e default*/
+  background: black; /*#15161e default*/
   /* background color */
   margin: 10px 4px 4px 4px;
   /* empty spaces around */
@@ -66,15 +66,11 @@ tooltip {
 
 
 #workspaces button {
-  /* padding: 0px 5px 0px 5px; */
-  /* fit with pill padding, 0px for not haveing duped vertical padding, 4px to make a square (4px value from module padding: ...#clock {padding >>4px<< 10px}) */
-  /* margin-left: 3px; */
-  /* border: 1px solid transparent; */
   transition-property:
       background-color, border-left-color, border-right-color;
   transition-duration: 0.1s;
   font-size: 10px;
-  color: #c0caf5;
+  color: white;
 }
 
 #workspaces button.empty {
@@ -87,8 +83,13 @@ tooltip {
 
 #workspaces button.active {
   /* active workspace */
-  background: #7899df;
+  background: #547792;
+  border-radius: 8px;
+}
 
+#workspaces button:hover{
+  background: #547792;
+  border-radius: 8px;
 }
 
 

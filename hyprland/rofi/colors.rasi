@@ -1,0 +1,10 @@
+* {
+    font:                           "SF Pro Display 12";
+    font-weight:                    700;
+    background:                   rgba(31, 33, 35, 0.27);
+    background-alt:               #313244;
+    foreground:                   #eff1f5;
+    selected:                     #8caaee;
+    active:                       #6E77FF;
+    urgent:                       #8E3596;
+}

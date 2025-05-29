@@ -37,7 +37,7 @@
         "org.gnome.Nautilus": "Files",
         "Brave-Browser": "Brave"
       },
-      "on-click-middle": "pkill waybar && hyprctl dispatch exec waybar"
+      "on-click-middle": "pkill waybar && hyprctl dispatch exec waybar -c ~/.config/waybar/config.jsonrc -s ~/.config/waybar/styles.css"
     },
     "hyprland/workspaces": {
         "all-outputs": true,

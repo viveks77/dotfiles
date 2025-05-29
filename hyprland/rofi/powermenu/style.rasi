@@ -3,15 +3,7 @@ configuration {
     show-icons: false;
 }
 
-/*****----- Global Properties -----*****/
-* {
-    font: "SF Pro Display 15";
-    background:                  transparent;
-    foreground: #cdd6f4;
-    selected: #cba6f7;
-    active: #f5e0dc;
-    urgent: #f38ba8;
-}
+@import "../colors.rasi"
 
 /*****----- Main Window -----*****/
 window {
@@ -33,8 +25,6 @@ window {
 mainbox {
     enabled: true;
     spacing: 2px;
-    margin: 4px;
-    padding: 2px;
     children: [ "listview" ];
     background-color: transparent; 
 }

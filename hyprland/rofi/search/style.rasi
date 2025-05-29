@@ -10,19 +10,7 @@ configuration {
     fake-transparency: true;
 }
 
-
-/*****----- Global Properties -----*****/
-* {
-    font:                          "SF Pro Display 12";
-    font-weight: 700;
-    background:                    transparent;
-    background-alt:              #313244;
-    foreground:                  #eff1f5;
-    selected:                    #8caaee;
-    active:                      #6E77FF;
-    urgent:                      #8E3596;
-    
-}
+@import "../colors.rasi"
 
 /*****----- Main Window -----*****/
 window {
