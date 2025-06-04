@@ -14,7 +14,7 @@ tooltip {
   font-family: inherit;
   background: black;
   /* tooltip background */
-  border: 2px solid black;
+  border: 1px solid black;
   /* tooltip border size and color */
   border-radius: 5px;
   /* tooltip rounded corners */
@@ -71,6 +71,7 @@ tooltip {
   transition-duration: 0.1s;
   font-size: 10px;
   color: white;
+  margin: 0px 2px;
 }
 
 #workspaces button.empty {
