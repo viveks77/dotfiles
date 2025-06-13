@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-notify-send -t 3000 -i info " 󰤨  Checking For Wifi"
+notify-send -t 3000 -i info "Checking For Wifi"
 
 # Check if wifi is on
 check_wifi_on=$( nmcli --field WIFI g | sed 1d | sed 's/ //g' )
@@ -37,7 +37,7 @@ enable_wifi() {
 
 # Rofi menu for the wifi list
 list_wifi() {
-	echo -e "󰤭   Disable Wifi\n${string_to_pass}   Manual Setup\n${wifi_list}" | list_menu
+	echo -e "󰤭   Disable Wifi\n${string_to_pass}${wifi_list}" | list_menu
 }
 
 # Rofi menu for the details of the active connection

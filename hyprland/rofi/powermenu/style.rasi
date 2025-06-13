@@ -7,7 +7,6 @@ configuration {
 
 /*****----- Main Window -----*****/
 window {
-    transparency: "real";
     location: center;
     anchor: center;
     fullscreen: false;
@@ -15,39 +14,29 @@ window {
     x-offset: 0px;
     y-offset: 0px;
     padding: 4px;
-    background-color: @background;
-    border:                      5px;
-    border-color:                rgba(140, 170, 238, 0.2);
+    border:                      4px;
+    border-color:               @border-clr;
     border-radius:               5px;
+    background-color: @background;
 }
 
 /*****----- Main Box -----*****/
 mainbox {
     enabled: true;
     spacing: 2px;
-    children: [ "listview" ];
-    background-color: transparent; 
+    children: ["listview" ];
+    background-color: @background; 
 }
 
 
-
-/*****----- Inputbar -----*****/
-inputbar {
-    enabled: true;
-    background-color: @background;
-    text-color: @foreground;
-    children: ["dummy", "prompt"];
+listbox {
+    spacing:                     0px;
+    padding:                     0px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "listview" ];
 }
 
-prompt {
-    enabled: true;
-    padding: 4px;
-    border-radius: 4px;
-    background-color: #a6e3a1;
-    text-color: #313244;
-}
-
-/*****----- Listview -----*****/
 listview {
     enabled: true;
     columns: 1;
@@ -59,12 +48,13 @@ listview {
     reverse: false;
     fixed-height: true;
     fixed-columns: true;
+
     spacing: 4px;
     padding: 4px;
     background-color: @background;
 }
 
-/*****----- Elements (Text Instead of Icons) -----*****/
+/*****----- Elements -----*****/
 element {
     enabled: true;
     padding: 10px;
@@ -72,31 +62,42 @@ element {
     background-color: transparent;
     text-color: #cdd6f4;
     cursor: pointer;
+    
 }
-
 element selected.normal {
-    background-color:rgba(140, 170, 238, 1);
-    text-color: #FDFBEE;
+    background-color: @selected;
+    text-color: white;
 }
-
+element-icon {
+    background-color:            transparent;
+    size:                        24px;
+}
 element-text {
-    font: "SF Pro Display 12";
-    background-color: transparent;
-    text-color: inherit;
-    cursor: inherit;
+    padding:                     0px 10px;
+    background-color:            transparent;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0;
 }
 
-/*****----- Message Box -----*****/
+/*****----- Mode Switcher (Disabled) -----*****/
+mode-switcher {
+    enabled:                     false;
+}
+
+/*****----- Message & Error -----*****/
 message {
-    enabled: true;
-    margin: 2px;
-    padding: 4px;
-    border-radius: 2px;
-    background-color: #f5e0dc;
-    text-color: #1e1e2e;
+    background-color:            transparent;
 }
-
 textbox {
-    background-color: transparent;
-    text-color: @foreground;
+    padding:                     4px;
+    border-radius:               8px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+error-message {
+    padding:                     4px;
+    border-radius:               8px;
+    background-color:            rgba(255, 0, 0, 0.2);
+    text-color:                  #ff5555;
 }

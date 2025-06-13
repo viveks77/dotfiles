@@ -18,10 +18,10 @@ window {
     anchor:                      center;
     fullscreen:                  false;
     width:                       700px;
-    border:                      5px;
-    border-color:rgba(140, 170, 238, 0.2);
+    border:                      4px;
+    border-color:               @border-clr;
     border-radius:               5px;
-    background-color:            @background;
+    background-color: @background;
 }
 
 /*****----- Main Box -----*****/

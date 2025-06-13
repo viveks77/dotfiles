@@ -1,16 +1,18 @@
 {
     "layer": "top",
-    "height": 47,
+    "height": 37,
+    "margin-top": 3,
+    "margin-bottom": 3,
     "reload_style_on_change": true,
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/window",
-        "mpris",
+        "clock",
     ],
     "modules-center": [
-        "clock"
+        "mpris",
     ],
     "modules-right": [
+        "hyprland/window",
         "tray",
         "cpu",
         "temperature",
@@ -20,25 +22,25 @@
         "network"
     ],
     "hyprland/window": {
-    "format": "{initialClass}",
-    "icon": true,
-    "icon-size": 16,
-    "seperate-outputs": true,
-    "rewrite": {
-        "": "PREDATOR",
-        "Mozilla Firefox": "Firefox",
-        "(.*) Thunar": "Thunar",
-        "(.*)obs(.*)": "OBS",
-        "Spotify (.*)": "Spotify",
-        "discord(.*)": "Discord",
-        "Code": "VS Code",
-        "Docker Desktop": "Docker",
-        "kitty": "Kitty",
-        "zen-alpha": "Zen",
-        "org.gnome.Nautilus": "Files",
-        "Brave-Browser": "Brave"
-      },
-      "on-click-middle": "pkill waybar && hyprctl dispatch exec waybar -c ~/.config/waybar/config.jsonrc -s ~/.config/waybar/styles.css"
+        "format": "{initialClass}",
+        "icon": true,
+        "icon-size": 16,
+        "seperate-outputs": true,
+        "rewrite": {
+            "": "PREDATOR",
+            "Mozilla Firefox": "Firefox",
+            "(.*) Thunar": "Thunar",
+            "(.*)obs(.*)": "OBS",
+            "Spotify (.*)": "Spotify",
+            "discord(.*)": "Discord",
+            "Code": "VS Code",
+            "Docker Desktop": "Docker",
+            "kitty": "Kitty",
+            "zen-alpha": "Zen",
+            "org.gnome.Nautilus": "Files",
+            "Brave-Browser": "Brave"
+        },
+        "on-click-middle": "pkill waybar && hyprctl dispatch exec waybar -c ~/.config/waybar/config.jsonrc -s ~/.config/waybar/styles.css"
     },
     "hyprland/workspaces": {
         "all-outputs": true,
@@ -93,7 +95,7 @@
     },
     "backlight": {
         "device": "intel_backlight", // or the correct one from `brightnessctl --list`
-        "format": "☀   {percent}%",
+        "format": "☀ {percent}%",
         "format_alt": "Brightness: {percent}%",
         "interval": 1,
     },
@@ -145,8 +147,8 @@
       }
     },
     "pulseaudio": {
-        "format": "{icon}     {volume}%",
-        "format-bluetooth": "{volume}%     {icon}",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon}",
         "format-muted": "󰖁 0%",
         "format-icons": {
             "headphone": "",
@@ -182,8 +184,8 @@
     "temperature": {
         "thermal-zone": 2,
         "critical-threshold": 80,
-        "format-critical": "  {temperatureC}°C",
-        "format": "  {temperatureC}°C",
+        "format-critical": " {temperatureC}°C",
+        "format": " {temperatureC}°C",
         "tooltip": false
     },
 }

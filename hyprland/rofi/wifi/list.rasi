@@ -3,32 +3,19 @@ configuration {
 	show-icons: 		false;
 }
 
-/*****----- Global Properties -----*****/
-* {
-    font:                        "JetBrains Mono Nerd Font 12";
-    background:                  #11111b;
-    background-alt:              #313244;
-    foreground:                  #eff1f5;
-    selected:                    #cba6f7;
-    active:                      #6E77FF;
-    urgent:                      #8E3596;
-}
+@import "../colors.rasi"
 
 /*****----- Main Window -----*****/
 window {
-    transparency:                "real";
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       500px;
-    x-offset:                    0px;
-    y-offset:                    0px;
-
-    /* properties for all widgets */
-    enabled:                     true;
-    border-radius:               8px;
-    cursor:                      "default";
-    background-color:            @background;
+    width:                       700px;
+    height:                      400px;
+    border:                      4px;
+    border-color:               @border-clr;
+    border-radius:               5px;
+    background-color: @background;
 }
 
 /*****----- Main Box -----*****/
@@ -44,83 +31,98 @@ mainbox {
 inputbar {
     enabled:                     true;
     spacing:                     0px;
-    padding:                     28px 24px 0px 24px;
+    padding:                     12px 5px;
     background-color:            transparent;
     text-color:                  @foreground;
     orientation:                 horizontal;
-    children:                    [ "textbox-prompt-colon", "dummy", "entry" ];
-}
-
-dummy {
-    background-color: 		 transparent;
+    children:                    [ "textbox-prompt-colon","entry" ];
 }
 
 entry {
     enabled:                     true;
-    expand:                      false;
-    width:                       250px;
-    padding:                     12px 16px 8px 16px;
-    border-radius:               8px;
-    background-color:            @background-alt;
-    text-color:                  inherit;
+    expand:                      true;
+    width:                       100%;
+    padding:                     8px 5px;
+    border-radius:               5px;
+    background-color:            transparent;
+    text-color:                  @foreground;
     cursor:                      text;
-    placeholder:                 "Search";
-    placeholder-color:           inherit;    
+    placeholder-color:           inherit;
+    placeholder: "Search"; 
 }
 
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
     str:                         "";
-    padding:                     12px 24px 12px 14px;
+    padding: 9px 12px;
     border-radius:               100%;
-    background-color:            #a6e3a1;
-    text-color:                  @background;
+    background-color:            transparent;
+    text-color:                  @selected;
 }
 
 /*****----- Listview -----*****/
 listview {
-    enabled:                     true;
-    columns:                     1;
-    lines:                       5;
-    cycle:                       true;
-    dynamic:                     true;
-    scrollbar:                   false;
-    layout:                      vertical;
-    reverse:                     false;
-    fixed-height:                true;
-    fixed-columns:               true;
-    
-    spacing:                     0px;
-    margin: 			 32px 24px;
-    border-radius: 		 8px;
-    background-color:            #1e1e2e;
-    text-color:                  @foreground;
-    cursor:                      "default";
+    enabled: true;
+    columns: 1;
+    lines: 6;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+
+    spacing: 4px;
+    padding: 4px;
+    background-color: @background;
 }
 
 /*****----- Elements -----*****/
 element {
-    enabled:                     true;
-    spacing:                     0px;
-    padding:                     12px 8px;
+    enabled: true;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    text-color: #cdd6f4;
+    cursor: pointer;
+    
+}
+element selected.normal {
+    background-color: @selected;
+    text-color: white;
+}
+element-icon {
+    background-color:            transparent;
+    size:                        24px;
+}
+element-text {
+    padding:                     0px 10px;
+    background-color:            transparent;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0;
+}
+
+/*****----- Mode Switcher (Disabled) -----*****/
+mode-switcher {
+    enabled:                     false;
+}
+
+/*****----- Message & Error -----*****/
+message {
+    background-color:            transparent;
+}
+textbox {
+    padding:                     4px;
     border-radius:               8px;
     background-color:            transparent;
     text-color:                  @foreground;
-    cursor:                      pointer;
 }
-element.selected  {
-    background-color:            @selected;
-    text-color:                  @background;
-}
-element-icon {
-    size:                        0px;
-}
-element-text {
-    padding: 			 0px 16px;
-    background-color:            transparent;
-    text-color:                  inherit;
-    cursor:                      inherit;
-    vertical-align:              0.5;
-    horizontal-align:            0;
+error-message {
+    padding:                     4px;
+    border-radius:               8px;
+    background-color:            rgba(255, 0, 0, 0.2);
+    text-color:                  #ff5555;
 }
