@@ -3,7 +3,7 @@ configuration {
     show-icons:                 false;
 }
 
-@import "../colors.rasi"
+@import "../shared.rasi"
 
 /*
 USE_BUTTONS=YES
@@ -20,11 +20,11 @@ window {
     y-offset:                    0px;
 
     padding:                     0px;
-    border:                      0px solid;
+    border:                      4px;
+    border-color:               @border-color;
     border-radius:               5px;
-    border-color:                @selected;
     cursor:                      "default";
-    background-color:            @background;
+    background-color:            @background-alt;
 }
 
 /*****----- Main Box -----*****/
@@ -65,20 +65,20 @@ element {
     enabled: true;
     padding: 10px;
     border-radius: 5px;
-    background-color: #313244;
+    background-color: transparent;
+    text-color: @foreground;
     cursor: pointer;
 }
 
 element-text {
     font: "SF Pro Display 15";
     background-color: transparent;
-    text-color: #FDFBEE;
-    cursor: inherit;
+    text-color: inherit;
     vertical-align: 0.5;
     horizontal-align: 0.5; /* Left align */
 }
 
 element selected.normal {
     background-color: @selected;
-    text-color: #FDFBEE;
+    text-color: black;
 }

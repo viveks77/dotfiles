@@ -3,7 +3,7 @@ configuration {
     show-icons: false;
 }
 
-@import "../colors.rasi"
+@import "../shared.rasi"
 
 /*****----- Main Window -----*****/
 window {
@@ -15,9 +15,9 @@ window {
     y-offset: 0px;
     padding: 4px;
     border:                      4px;
-    border-color:               @border-clr;
+    border-color:               @border-color;
     border-radius:               5px;
-    background-color: @background;
+    background-color: @background-alt;
 }
 
 /*****----- Main Box -----*****/
@@ -25,7 +25,7 @@ mainbox {
     enabled: true;
     spacing: 2px;
     children: ["listview" ];
-    background-color: @background; 
+    background-color: @background-alt; 
 }
 
 
@@ -51,7 +51,7 @@ listview {
 
     spacing: 4px;
     padding: 4px;
-    background-color: @background;
+    background-color: @background-alt;
 }
 
 /*****----- Elements -----*****/
@@ -60,13 +60,13 @@ element {
     padding: 10px;
     border-radius: 5px;
     background-color: transparent;
-    text-color: #cdd6f4;
+    text-color: @foreground;
     cursor: pointer;
     
 }
 element selected.normal {
     background-color: @selected;
-    text-color: white;
+    text-color: @selected-text;
 }
 element-icon {
     background-color:            transparent;

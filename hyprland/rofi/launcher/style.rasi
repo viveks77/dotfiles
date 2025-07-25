@@ -11,7 +11,7 @@ configuration {
     fake-transparency: true;
 }
 
-@import "../colors.rasi"
+@import "../shared.rasi"
 
 /*****----- Main Window -----*****/
 window {
@@ -21,15 +21,15 @@ window {
     width:                       700px;
     height:                      400px;
     border:                      4px;
-    border-color:               @border-clr;
+    border-color:                @border-color;
     border-radius:               5px;
-    background-color: @background;
+    background-color: @background-alt;
 }
 
 /*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
-    background-color:            @background;
+    background-color:            @background-alt;
     orientation:                 vertical;
     children:                    [ "inputbar", "listbox" ];
     height:                      100%;
@@ -40,7 +40,7 @@ mainbox {
 inputbar {
     enabled:                     true;
     padding:                     12px 5px;
-    background-color:            @background;
+    background-color:            @background-alt;
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "prompt", "entry" ];
@@ -89,7 +89,7 @@ listview {
 
     spacing: 4px;
     padding: 4px;
-    background-color: @background;
+    background-color: @background-alt;
 }
 
 /*****----- Elements -----*****/
@@ -104,7 +104,7 @@ element {
 }
 element selected.normal {
     background-color: @selected;
-    text-color: white;
+    text-color: @selected-text;
 }
 element-icon {
     background-color:            transparent;

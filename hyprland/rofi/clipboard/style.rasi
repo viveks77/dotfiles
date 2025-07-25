@@ -10,7 +10,7 @@ configuration {
 	window-format:              "{w} {c}";
 }
 
-@import "../colors.rasi"
+@import "../shared.rasi"
 
 /*****----- Main Window -----*****/
 window {
@@ -20,9 +20,9 @@ window {
     width:                       700px;
     height:                      400px;
     border:                      4px;
-    border-color:               @border-clr;
+    border-color:               @border-color;
     border-radius:               5px;
-    background-color:           @background;
+    background-color:           @background-alt;
 }
 
 /*****----- Main Box -----*****/
@@ -59,7 +59,7 @@ textbox-prompt-colon {
     padding:                     12px 20px 12px 15px;
     border-radius:               10%;
     background-color:            #a6e3a1;
-    text-color:                  @background;
+    text-color:                 @foreground;
 }
 entry {
     enabled:                     true;

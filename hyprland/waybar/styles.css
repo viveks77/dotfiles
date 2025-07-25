@@ -1,5 +1,7 @@
+@import "colors.css";
+
 * {
-  font-family: "FiraCode Nerd Font";
+  font-family: "JetBrainsMono NF";
   font-weight: bold;
   font-size: 13px;
   min-height: 0;
@@ -11,17 +13,15 @@ window#waybar {
 }
 
 .modules-left{
-  background: #872341;
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 5px;
 }
 
 .modules-center {
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .modules-right{
-  border-radius: 20px 0px 0px 20px;
-  background: #006989
+  border-radius: 5px;
 }
 
 tooltip {
@@ -54,7 +54,7 @@ tooltip {
 #custom-updates {
   /*text-shadow: 1px 1px 2px rgb(0, 0, 0);*/
   /* text shadow, offset-x | offset-y | blur-radius | color */
-  background: black; /*#15161e default*/
+  background: #15161e; /*#15161e default*/
   /* background color */
   padding: 5px 10px;
   /* pill background shadows */
@@ -62,24 +62,24 @@ tooltip {
   color: white;
 }
 
-/* extend empty space on both side of the bar,
-* value from ~/.config/hypr/hyprland.conf
-* gaps_out (8px) + border size (2px) = 10px */
-
 #clock {
   padding: 0px 15px;
-  border-radius: 0px 20px 20px 0px;
-  background-color: transparent;
+  border-radius: 5px;
+  background-color: #15161e;
+  color: white;
+}
+
+#backlight {
+  border-radius: 0px 5px 5px 0px;
 }
 
 #privacy-item {
-  background: #e64553;
   color: #15161e;
 }
 
 #workspaces {
-  background: black;
-  border-radius: 0px 20px 20px 0px;
+  background: #15161e;
+  border-radius: 5px;
 }
 
 #workspaces button {
@@ -97,33 +97,37 @@ tooltip {
 }
 
 #workspaces button.active {
-  /* active workspace */
-  background: #006989;
   border-radius: 8px;
+  background: @primary_container;
 }
 
 #workspaces button:hover{
-  background: #e64553;
   border-radius: 8px;
 }
 
 #window {
   background-color: transparent;
-  border-radius: 20px 20px;
+  border-radius: 5px;
   margin-left: 10px;
 }
 
 #mpris{
-  border-radius: 20px 20px;
-  color: #F1DEDD;
+  background-color: transparent;
+  color: white;
+
 }
 
 #power-profiles-daemon {
   color: #c4cdf2;
 }
 
-#tray, #cpu{
-  border-radius: 20px 0px 0px 20px;
+#tray{
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+#cpu{
+  border-radius: 5px 0px 0px 5px;
 }
 
 
