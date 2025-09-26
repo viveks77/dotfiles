@@ -6,6 +6,10 @@ command = "swww"
 arguments = [ "img", "-t", "outer", "--transition-duration", "1.5", "--transition-step", "255", "--transition-fps", "60", "-f", "Nearest",]
 set = true
 
+[templates.m3colors]
+input_path = '~/.config/matugen/templates/colors.json'
+output_path = '~/.local/state/quickshell/user/generated/colors.json'
+
 [templates.hyprland]
 input_path = "~/.config/matugen/templates/hyprland-colors.conf"
 output_path = "~/.config/hypr/colors.conf"
@@ -19,11 +23,14 @@ post_hook = 'pkill -SIGUSR1 kitty'
 [templates.waybar]
 input_path = '~/.config/matugen/templates/waybar-colors.conf'
 output_path = '~/.config/waybar/colors.css'
-post_hook = 'pkill -SIGUSR2 waybar'
 
 [templates.rofi]
 input_path = '~/.config/matugen/templates/rofi-colors.conf'
 output_path = '~/.config/rofi/colors.rasi'
+
+[templates.zen]
+input_path = '~/.config/matugen/templates/zen-colors.conf'
+output_path = '/home/predator/.var/app/app.zen_browser.zen/.zen/2fd31wdf.Default (release)/chrome/colors.css'
 
 [config.custom_colors.red]
 color = "#FF0000"
